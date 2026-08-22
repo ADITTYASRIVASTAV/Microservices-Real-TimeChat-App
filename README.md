@@ -10,7 +10,9 @@ Who can use it?
 Developers learning microservices, startups requiring a chat backend, or anyone looking for a robust real‑time messaging template.
 
 ===============
+
  Features
+
 ===============
  Authentication
 
@@ -25,7 +27,9 @@ Developers learning microservices, startups requiring a chat backend, or anyone 
 ✅ BCrypt Password Hashing (strength 10)
 
 ==================
+
  Messaging
+
 ==================
 ✅ Real‑time 1‑to‑1 Chat via WebSocket
 
@@ -36,7 +40,9 @@ Developers learning microservices, startups requiring a chat backend, or anyone 
 ✅ Chat History with Pagination
 
 =============
+
  Groups
+
 =============
 ✅ Create / Join / Leave Groups
 
@@ -47,7 +53,9 @@ Developers learning microservices, startups requiring a chat backend, or anyone 
 ✅ Group Search
 
 ====================
+
  Notifications
+
 ====================
 ✅ Real‑time Push Notifications
 
@@ -56,7 +64,9 @@ Developers learning microservices, startups requiring a chat backend, or anyone 
 ✅ In‑app Notification List
 
 ====================
+
  Security
+
 ====================
 ✅ End‑to‑End Encryption (RSA 2048‑bit)
 
@@ -67,7 +77,9 @@ Developers learning microservices, startups requiring a chat backend, or anyone 
 ✅ CORS Protection
 
 =======================
+
  Real‑time Presence
+
 ======================
 
 ✅ Online / Offline Status
@@ -75,7 +87,9 @@ Developers learning microservices, startups requiring a chat backend, or anyone 
 ✅ Last Seen Timestamp
 
 ====================
+
  Frontend
+
 ====================
 ✅ Mobile Responsive Design
 
@@ -85,11 +99,16 @@ Developers learning microservices, startups requiring a chat backend, or anyone 
 
 
 ==================
+
 Tech Stack
+
 ==================
 
+
 ============
+
 Backend
+
 ===========
 Category	                           Technology
 Language	                             Java 21
@@ -110,7 +129,9 @@ Containerization	Docker,                 Docker Compose (14 containers)
 
 
 ========================
+
 Frontend
+
 =======================
 Category	                                         Technology
 Framework	                                          React 18
@@ -129,32 +150,36 @@ Icons	                                                     Lucide React
 
 
 ======================
+
 High‑Level Diagram
+
 =======================
 
                           
-                              React Frontend  
-                                     ┬
+                         ┌─────────────────────┐
+                          │     React Frontend    │
+                          └──────────┬───────────┘
                                      │ HTTP / WebSocket
                                      ▼
-                                 API Gateway       Port 8080
-                            (JWT Validation) 
-
+                          ┌─────────────────────┐
+                          │     API Gateway      │  Port 8080
+                          │  (JWT Validation)    │
+                          └──────────┬───────────┘
                                      │
-                     ┌             ──────
+                     ┌───────────────┼────────────────┐
                      │               │                │
                      ▼               ▼                ▼
-          
-                Auth Service   User Service │ │  Chat Service │
-             │  Port 8081      │  Port 8082    │ │  Port 8083    │
-            
+             ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+             │  Auth Service │ │  User Service │ │  Chat Service │
+             │  Port 8081    │ │  Port 8082    │ │  Port 8083    │
+             └──────┬───────┘ └──────┬───────┘ └──────┬───────┘
                     │                │                │
-                 
+                    └───────────────┼────────────────┘
                                     │
                                     ▼
-                        
+                          ┌─────────────────────┐
                           │   Eureka Server      │  Port 8761
-                         
+                          └─────────────────────┘
 
                           ┌─────────────────────┐
                           │  Kafka (5 Topics)    │
@@ -175,6 +200,8 @@ High‑Level Diagram
 
 
 =======================
+
+
 Microservices Summary
 
 
@@ -191,8 +218,14 @@ admin-server	8090	Monitoring Dashboard	-
 
 
 ======================
+
+
 Installation & Setup
+
+
 ======================
+
+
 1. Clone the repository
 bash
 git clone https://github.com/adityaraj/chatapp.git
@@ -221,7 +254,10 @@ notification-service
 
 
 =================
+
 . Frontend Setup
+
+
 ==================
 bash
 cd chat-app-frontend
@@ -230,4 +266,5 @@ npm run dev
 
 
  License
+ 
 Distributed under the MIT License. See LICENSE for more information.
