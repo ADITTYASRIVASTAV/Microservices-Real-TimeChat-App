@@ -1,5 +1,5 @@
 
-About The Project
+##  About The Project
 
 ChatApp is a full‑featured real‑time messaging platform inspired by WhatsApp. It provides secure one‑to‑one and group chats, end‑to‑end encryption, real‑time presence, read receipts, and push notifications — all built on a scalable microservices architecture.
 
@@ -9,107 +9,104 @@ This project demonstrates production‑grade full‑stack development skills, in
 Who can use it?
 Developers learning microservices, startups requiring a chat backend, or anyone looking for a robust real‑time messaging template.
 
-===============
-
- Features
-
-===============
- Authentication
-
-✅ User Registration with Email OTP Verification
-
-✅ Login with JWT (24h access + refresh tokens)
-
-✅ Google OAuth2 Login
-
-✅ Forgot Password with Email Reset Link
-
-✅ BCrypt Password Hashing (strength 10)
-
-==================
-
- Messaging
-
-==================
-✅ Real‑time 1‑to‑1 Chat via WebSocket
-
-✅ Message Read Receipts (✓ Sent, ✓✓ Delivered, 🔵✓✓ Read)
-
-✅ Typing Indicators (optional)
-
-✅ Chat History with Pagination
-
-=============
-
- Groups
-
-=============
-✅ Create / Join / Leave Groups
-
-✅ Admin & Member Roles
-
-✅ Group Messaging with WebSocket
-
-✅ Group Search
-
-====================
-
- Notifications
-
-====================
-✅ Real‑time Push Notifications
-
-✅ Unread Badge Count per Chat / Group
-
-✅ In‑app Notification List
-
-====================
-
- Security
-
-====================
-✅ End‑to‑End Encryption (RSA 2048‑bit)
-
-✅ JWT Validation at API Gateway
-
-✅ WebSocket JWT Authentication
-
-✅ CORS Protection
-
-=======================
-
- Real‑time Presence
-
-======================
-
-✅ Online / Offline Status
-
-✅ Last Seen Timestamp
-
-====================
-
- Frontend
-
-====================
-✅ Mobile Responsive Design
-
-✅ Dark Mode Support
-
-✅ Smooth Animations with Framer Motion
 
 
-==================
+ ## Features
 
-Tech Stack
+ ## Authentication
 
-==================
+ User Registration with Email OTP Verification
+
+ Login with JWT (24h access + refresh tokens)
+
+ Google OAuth2 Login
+
+ Forgot Password with Email Reset Link
+
+ BCrypt Password Hashing (strength 10)
 
 
-============
 
-Backend
+ ## Messaging
 
-===========
+
+ Real‑time 1‑to‑1 Chat via WebSocket
+
+ Message Read Receipts (✓ Sent, ✓✓ Delivered, 🔵✓✓ Read)
+
+ Typing Indicators (optional)
+
+ Chat History with Pagination
+
+
+
+ ## Groups
+
+
+ Create / Join / Leave Groups
+
+ Admin & Member Roles
+
+ Group Messaging with WebSocket
+
+ Group Search
+
+
+
+ ## Notifications
+
+
+ Real‑time Push Notifications
+
+ Unread Badge Count per Chat / Group
+
+ In‑app Notification List
+
+
+
+ ## Security
+
+
+ End‑to‑End Encryption (RSA 2048‑bit)
+
+ JWT Validation at API Gateway
+
+ WebSocket JWT Authentication
+
+ CORS Protection
+
+
+
+ ## Real‑time Presence
+
+
+
+ Online / Offline Status
+
+ Last Seen Timestamp
+
+
+
+## Frontend
+
+
+ Mobile Responsive Design
+
+ Dark Mode Support
+
+ Smooth Animations with Framer Motion
+
+
+
+
+## Tech Stack
+
+
+
+
+## Backend
+
+
 Category	                           Technology
 Language	                             Java 21
 Framework	                             Spring Boot 4+
@@ -128,11 +125,11 @@ Containerization	Docker,                 Docker Compose (14 containers)
 
 
 
-========================
 
-Frontend
 
-=======================
+## Frontend
+
+
 Category	                                         Technology
 Framework	                                          React 18
 Language	                                           TypeScript
@@ -149,11 +146,10 @@ Toast	                                                      Sonner
 Icons	                                                     Lucide React
 
 
-======================
 
-High‑Level Diagram
 
-=======================
+## High‑Level Diagram
+
 
                           
                          ┌─────────────────────┐
@@ -195,14 +191,14 @@ High‑Level Diagram
 
         PostgreSQL DBs: auth_db, user_db, chat_db, notification_db
 
-=================================
 
 
 
-=======================
 
 
-Microservices Summary
+
+
+## Microservices Summary
 
 
 
@@ -217,20 +213,18 @@ admin-server	8090	Monitoring Dashboard	-
 
 
 
-======================
 
+# Installation & Setup
 
-Installation & Setup
-
-
-======================
 
 
 1. Clone the repository
 bash
 git clone https://github.com/adityaraj/chatapp.git
 cd chatapp
-2. Backend Setup
+
+
+# 2. Backend Setup
 Using Docker (Recommended)
 bash
 cd chat-app-backend
@@ -244,21 +238,20 @@ Start Kafka & Zookeeper locally or use Docker for Kafka.
 
 Start each microservice in the following order:
 
-eureka-server
-admin-server (optional)
-api-gateway
-auth-service
-user-service
-chat-service
-notification-service
+# eureka-server
+# admin-server (optional)
+# api-gateway
+# auth-service
+# user-service
+# chat-service
+# notification-service
 
 
-=================
-
-. Frontend Setup
 
 
-==================
+# . Frontend Setup
+
+
 bash
 cd chat-app-frontend
 npm install
